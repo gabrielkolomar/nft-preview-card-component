@@ -1,5 +1,6 @@
 :root {
   --soft-blue: #8bacda;
+  --light-gray: #b3b3b3;
   --cyan: #00fff6;
   --very-dark-blue: #0d192b;
   --very-dark-blue2: #14253d;
@@ -39,4 +40,55 @@ body {
 .container h2 {
   color: var(--white);
   margin-bottom: 15px;
+  transition: 0.5s;
+}
+
+.container p {
+  color: var(--light-gray);
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+.specs {
+  display: flex;
+  align-items: center;
+}
+
+.specs strong {
+  color: var(--cyan);
+  margin-right: 48%;
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+.specs span {
+  color: var(--light-gray);
+  margin-bottom: 15px;
+  margin-left: 5px;
+}
+
+hr {
+  border-color: var(--very-dark-blue3);
+}
+
+.profile {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 40px;
+  border: 2px solid var(--white);
+  border-radius: 50px;
+}
+
+.profile span {
+  color: var(--white);
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+
+.profile strong {
+  transition: 0.5s;
 }
