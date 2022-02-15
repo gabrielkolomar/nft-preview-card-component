@@ -21,6 +21,7 @@ body {
   display: grid;
   height: 100vh;
   place-items: center;
+  padding: 40px;
 }
 
 .container {
@@ -31,39 +32,71 @@ body {
   box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
 }
 
-.container img {
+.container .equilibrium {
+  background: url(./assets/image-equilibrium.jpg) center no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
   max-width: 100%;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.container .equilibrium img {
+  opacity: 0;
+  transition: 300ms;
+}
+
+.container .equilibrium:hover {
+  cursor: pointer;
+  background: linear-gradient(
+      0deg,
+      hsla(178, 100%, 50%, 0.5) 0%,
+      hsla(178, 100%, 50%, 0.5) 100%
+    ),
+    url(./assets/image-equilibrium.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.container .equilibrium:hover img {
+  opacity: 1;
 }
 
 .container h2 {
   color: var(--white);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   transition: 0.5s;
 }
 
 .container p {
   color: var(--light-gray);
   font-weight: 300;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.specs div {
   display: flex;
   align-items: center;
 }
 
 .specs strong {
   color: var(--cyan);
-  margin-right: 48%;
-  margin-bottom: 15px;
   margin-left: 5px;
 }
 
 .specs span {
   color: var(--light-gray);
-  margin-bottom: 15px;
   margin-left: 5px;
 }
 
@@ -72,7 +105,7 @@ hr {
 }
 
 .profile {
-  margin-top: 15px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
 }
@@ -84,11 +117,21 @@ hr {
 }
 
 .profile span {
-  color: var(--white);
-  margin-bottom: 15px;
+  color: var(--light-gray);
   margin-left: 15px;
 }
 
 .profile strong {
   transition: 0.5s;
+  color: var(--white);
+}
+
+.container h2:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.profile strong:hover {
+  color: var(--cyan);
+  cursor: pointer;
 }
